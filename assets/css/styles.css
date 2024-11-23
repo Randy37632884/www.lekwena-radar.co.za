@@ -1,5 +1,5 @@
 body, html {
-    background-color: #f4f4f9;
+    background-color: grey;
     color: grey;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -47,7 +47,7 @@ footer {
     text-align: ;
     padding: 10px 0;
     background: grey;
-    color: white;
+    color: grey;
 }
 
 form {
@@ -96,8 +96,8 @@ input[type="submit"]:hover {
 
 .image-container img {
     margin-right: 05px; /* Space between images */
-    width: 500px; /* You can adjust the size of the images */
-    height: 400px;
+    width: 300px; /* You can adjust the size of the images */
+    height: 150px;
     object-fit: cover; /* Ensures images are resized to fit the container */
 }
 
