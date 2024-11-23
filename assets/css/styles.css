@@ -77,3 +77,33 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+/* Styling for the scrolling image banner */
+.scrolling-banner {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    margin-top: 50px; /* Adds space between content and the banner */
+    overflow: hidden; /* Hides the part of the images that go beyond the container */
+}
+
+.image-container {
+    display: flex;
+    animation: scroll-images 20s linear infinite; /* Scrolls images infinitely */
+}
+
+.image-container img {
+    margin-right: 20px; /* Space between images */
+    width: 200px; /* You can adjust the size of the images */
+    height: 100px;
+    object-fit: cover; /* Ensures images are resized to fit the container */
+}
+
+/* Keyframes for scrolling images */
+@keyframes scroll-images {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
