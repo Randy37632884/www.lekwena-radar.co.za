@@ -33,20 +33,20 @@ header {
 }
 
 .navbar a:hover {
-    background-color: #555;
+    background-color: grey;
 }
 
 #hero {
     text-align: center;
-    color: #fff;
-    background: #007BFF;
+    color: white;
+    background: grey;
     padding: 4rem 1rem;
 }
 
 footer {
-    text-align: center;
+    text-align: ;
     padding: 10px 0;
-    background: #004d00;
+    background: grey;
     color: white;
 }
 
@@ -68,8 +68,8 @@ input[type="text"], input[type="email"], textarea {
 }
 
 input[type="submit"] {
-    background-color: #007BFF;
-    color: grey;
+    background-color: grey;
+    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -85,7 +85,7 @@ input[type="submit"]:hover {
     width: 100%;
     background-color: #f0f0f0;
     padding: 20px 0;
-    margin-top: 20px; /* Adds space between content and the banner */
+    margin-top: 10px; /* Adds space between content and the banner */
     overflow: hidden; /* Hides the part of the images that go beyond the container */
 }
 
@@ -95,9 +95,9 @@ input[type="submit"]:hover {
 }
 
 .image-container img {
-    margin-right: 10px; /* Space between images */
-    width: 300px; /* You can adjust the size of the images */
-    height: 200px;
+    margin-right: 05px; /* Space between images */
+    width: 500px; /* You can adjust the size of the images */
+    height: 400px;
     object-fit: cover; /* Ensures images are resized to fit the container */
 }
 
