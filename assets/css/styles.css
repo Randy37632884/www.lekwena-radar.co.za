@@ -24,7 +24,7 @@ header {
 }
 
 .navbar a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     padding: 10px;
     transition: background-color 0.3s ease;
@@ -42,7 +42,6 @@ header {
 }
 
 footer {
-    text-align: ;
     padding: 10px 0;
     background: grey;
     color: white;
@@ -75,13 +74,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: grey;
 }
 
 /* Styling for the scrolling image banner */
 .scrolling-banner {
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: grey;
     padding: 20px 0;
     margin-top: 10px; /* Adds space between content and the banner */
      /* Hides the part of the images that go beyond the container */
