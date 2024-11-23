@@ -7,8 +7,9 @@ body, html {
 }
 
 header {
+    text-align: center
     background: #333;
-    color: #fff;
+    color: #008000;
     padding: 1rem;
 }
 
@@ -46,7 +47,7 @@ footer {
     text-align: center;
     padding: 1rem;
     background: #333;
-    color: #fff;
+    color: #008000;
 }
 
 form {
