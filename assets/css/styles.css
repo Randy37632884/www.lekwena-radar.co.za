@@ -7,7 +7,6 @@ body, html {
 }
 
 header {
-    text-align: center
     background-color: grey
     color: white;
     padding: 10px 0;
@@ -18,7 +17,6 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
 }
 
 .navbar li {
@@ -47,7 +45,7 @@ footer {
     text-align: ;
     padding: 10px 0;
     background: grey;
-    color: grey;
+    color: white;
 }
 
 form {
