@@ -8,7 +8,7 @@ body, html {
 
 header {
     text-align: center
-    background-color: #004d00
+    background-color: grey
     color: grey;
     padding: 10px 0;
 }
@@ -51,7 +51,7 @@ footer {
 }
 
 form {
-    background-color: #fff;
+    background-color: grey;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -69,7 +69,7 @@ input[type="text"], input[type="email"], textarea {
 
 input[type="submit"] {
     background-color: #007BFF;
-    color: white;
+    color: grey;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -85,19 +85,19 @@ input[type="submit"]:hover {
     width: 100%;
     background-color: #f0f0f0;
     padding: 20px 0;
-    margin-top: 50px; /* Adds space between content and the banner */
+    margin-top: 20px; /* Adds space between content and the banner */
     overflow: hidden; /* Hides the part of the images that go beyond the container */
 }
 
 .image-container {
     display: flex;
-    animation: scroll-images 20s linear infinite; /* Scrolls images infinitely */
+    animation: scroll-images 14s linear infinite; /* Scrolls images infinitely */
 }
 
 .image-container img {
-    margin-right: 20px; /* Space between images */
-    width: 200px; /* You can adjust the size of the images */
-    height: 100px;
+    margin-right: 10px; /* Space between images */
+    width: 300px; /* You can adjust the size of the images */
+    height: 200px;
     object-fit: cover; /* Ensures images are resized to fit the container */
 }
 
