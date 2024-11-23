@@ -56,7 +56,7 @@ footer {
 }
 
 form {
-    background-color: red;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -73,7 +73,7 @@ input[type="text"], input[type="email"], textarea {
 }
 
 input[type="submit"] {
-    background-color: green;
+    background-color: grey;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -87,10 +87,10 @@ input[type="submit"]:hover {
 
 /* Styling for the scrolling image banner */
 .scrolling-banner {
-    width: 100%;
+    width: 50%;
     overflow: hidden; /* Hides overflowing content */
-    background-color: pink;
-    padding: 10px 0;
+    background-color: white;
+    padding: 0px 0;
     position: relative; /* Allows precise positioning */
 }
 
