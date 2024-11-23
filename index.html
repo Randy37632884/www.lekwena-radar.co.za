@@ -5,19 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekwena Radar - Modernized</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Basic Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: grey;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative; /* To position the hamburger correctly */
+        }
+
+        /* Hide the checkbox input */
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Styling for the Hamburger Icon (Label) */
+        .hamburger {
+            font-size: 30px; /* Size of the hamburger icon */
+            cursor: pointer; /* Changes the mouse pointer when hovering */
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Navigation Menu Styling */
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Default layout is horizontal */
+            justify-content: center; /* Centers the items */
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+        }
+
+        /* Mobile-Friendly Styles */
+        @media (max-width: 768px) {
+            /* Show hamburger icon on smaller screens */
+            .hamburger {
+                display: block; /* Shows the hamburger icon */
+            }
+
+            /* Initially hide the nav links */
+            .nav-links {
+                display: none; /* Hide the menu by default */
+                flex-direction: column; /* Stack the items vertically */
+                width: 100%;
+                text-align: center;
+                background-color: grey; /* Dark background for the dropdown */
+                position: absolute;
+                top: 60px; /* Adjust based on your header height */
+                left: 0;
+                padding: 10px 0;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            /* When the checkbox is checked, display the menu */
+            .menu-toggle:checked + .hamburger + .nav-links {
+                display: flex;
+            }
+
+            /* Optional: add a transition to smooth the menu appearance */
+            .nav-links {
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="navbar">
             <h1>Lekwena Radar</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Hourly Observations</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <!-- Hidden Checkbox -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            
+            <!-- Label for the Hamburger Icon -->
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Hourly Observations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </header> 
 
@@ -29,7 +120,6 @@
 
     <section id="imageBanner" class="scrolling-banner">
         <div class="image-container">
-            <!-- Correct image URLs from Imgur -->
             <img src="https://i.postimg.cc/wT0pYHRb/nwu-logo-small.png" alt="Image 1">
             <img src="https://i.postimg.cc/1zkY67bQ/wrc-logo-small.png" alt="Image 2">
             <img src="https://i.postimg.cc/0QCxtgHK/lekwena-logo.png" alt="Image 3">
@@ -39,7 +129,5 @@
     <footer>
         <p>&copy; 2024 Lekwena Radar. All rights reserved.</p>
     </footer> 
-
- 
 </body>
 </html>
