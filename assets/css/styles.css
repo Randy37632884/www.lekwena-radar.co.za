@@ -8,6 +8,7 @@ html {
 
 /* Basic layout for the entire page */
 /* Styling for the body to remove any default margin and padding */
+/* Reset margin and padding for body */
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +19,7 @@ body {
 header {
     background-color: grey;
     color: white;
-    padding: 15px 0;
+    padding: 20px;
     text-align: center;
 }
 
@@ -26,47 +27,52 @@ header {
 .navbar {
     background-color: #333; /* Dark background */
     padding: 10px 0; /* Adds vertical padding */
-    text-align: center; /* Centers the navbar content */
+    width: 100%; /* Ensures navbar spans the full width */
+    display: flex;
+    justify-content: center; /* Centers the navbar content */
+    align-items: center; /* Vertically aligns the navbar items */
 }
 
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Uses flexbox to arrange items in a row */
-    justify-content: center; /* Centers items horizontally */
+    display: flex; /* Makes the list items appear in a row */
+    justify-content: space-between; /* Evenly spaces items horizontally */
     gap: 20px; /* Adds consistent space between the items */
 }
 
 .navbar li {
-    /* No margin needed here as gap in ul will handle spacing */
+    display: inline-block; /* Makes sure the items are inline */
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem; /* Font size for subheadings */
-    padding: 10px 20px; /* Padding to make each link clickable */
+    padding: 10px 20px; /* Padding around the text */
+    display: block;
+    text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover effect for the links */
+/* Hover effect for links */
 .navbar a:hover {
-    background-color: #575757; /* Light gray background when hovering */
-    transform: scale(1.1); /* Slightly enlarge on hover for effect */
+    background-color: #575757; /* Darker background when hovered */
+    transform: scale(1.1); /* Slightly enlarges the item on hover */
 }
 
-/* Mobile responsiveness */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Center them when stacked */
-        gap: 10px; /* Space between items */
+        align-items: center; /* Centers the items when stacked */
+        gap: 10px; /* Smaller gap for stacked items */
     }
 
     .navbar a {
-        padding: 8px 15px; /* Adjust padding on small screens */
-        font-size: 1rem; /* Smaller text on mobile */
+        font-size: 1rem; /* Slightly smaller text on mobile */
+        padding: 8px 15px; /* Reduced padding on mobile */
     }
 }
 
@@ -134,7 +140,7 @@ input[type="submit"]:hover {
 .scrolling-banner {
     width: 100%;
     overflow: hidden; /* Ensure no overflowing content */
-    background-color: pink;
+    background-color: white;
     padding: 10px 0;
     position: relative;
 }
