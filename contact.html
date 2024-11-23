@@ -21,42 +21,19 @@
         </div>
     </header>
   <section id="contact">
-   <h2>Contact Us</h2>
-   <p>Feel free to reach out with any questions or inquiries.</p>
-   <form id="contactForm" onsubmit="return validateForm()">
-       <label for="name">Name:</label><br>
-       <input type="text" id="name" name="name" required><br><br>
-
-       <label for="email">Email:</label><br>
-       <input type="email" id="email" name="email" required><br><br>
-
-       <label for="message">Message:</label><br>
-       <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-       <input type="submit" value="Send">
+   <h2>North-West University Operational WRF</h2>
+   <p>The Weather Research and Forecasting Model (WRF) is an advanced, community driven, and open source weather model that can be used for both operational forecasting and meteorological research at a variety of scales. Along with The NWU-Lekwena Radar, The NWU-WRF puts the North-West University Potchefstroom at the forefront of numerical weather prediction research in Africa, as the only university running an in-house, student driven operational weather radar and an operational numerical weather prediction model. Read more about WRF on the official user page.</p>
+   <h3>The Weather Research and Forecasting Model Version (WRFV) 4.0,</h3>
+   <p>Microphysics=New Thompson, et.al (8), Longwave Radiation=RRTMG scheme (4), Shortwave Radiation=RRTMG scheme (4), Land Surface=Noah Land Surface Model (2), Planetary Boundary layer=Yonsei University scheme (1), Cumulus Parameterization=Grell-Freitas (3), Model Vertical Levels=34</p>
    </form>
    <div id="formResponse"></div>
 </section>
 
-<script>
-   function validateForm() {
-       let name = document.getElementById('name').value;
-       let email = document.getElementById('email').value;
-       let message = document.getElementById('message').value;
-       
-       if (name === "" || email === "" || message === "") {
-           alert("All fields must be filled out");
-           return false;
-       }
 
-       document.getElementById("formResponse").innerHTML = "Thank you for contacting us, " + name + "! We'll get back to you soon.";
-       return false; // Prevent actual form submission (for now)
-   }
-</script>
 
     </section>
     <footer>
-        <p>&copy; 2024 Lekwena Radar. All rights reserved.</p>
+        <p>&copy; 2024 Lekwena Radar. All rights reserved. This page was generated via GitHub and is maintained by the NWU Environmental Sciences Students.</p>
     </footer>
 </body>
 </html>
