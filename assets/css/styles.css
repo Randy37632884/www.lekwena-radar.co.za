@@ -7,13 +7,14 @@ html {
 }
 
 /* Basic layout for the entire page */
+/* Styling for the body to remove any default margin and padding */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Styling for the header */
+/* Header styling */
 header {
     background-color: grey;
     color: white;
@@ -21,55 +22,51 @@ header {
     text-align: center;
 }
 
-/* Styling for the navigation bar (subheadings) */
+/* Styling for the navigation bar */
 .navbar {
-    display: flex;
-    justify-content: center; /* Centers the nav items horizontally */
-    align-items: center; /* Vertically aligns the nav items */
-    background-color: #333; /* Dark background for navbar */
-    padding: 10px 0; /* Adds padding inside the navbar */
+    background-color: #333; /* Dark background */
+    padding: 10px 0; /* Adds vertical padding */
+    text-align: center; /* Centers the navbar content */
 }
 
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Makes the list items appear in a row */
+    display: flex; /* Uses flexbox to arrange items in a row */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds consistent space between the items */
 }
 
 .navbar li {
-    margin: 0 15px; /* Adds space between nav items */
+    /* No margin needed here as gap in ul will handle spacing */
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.2rem; /* Adjusts font size for readability */
-    display: block; /* Makes the link a block element */
-    text-align: center; /* Centers the text inside the link */
+    font-size: 1.2rem; /* Font size for subheadings */
+    padding: 10px 20px; /* Padding to make each link clickable */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Hover effect for the links */
 .navbar a:hover {
-    background-color: #575757; /* Lighter grey on hover */
-    transform: scale(1.1); /* Slightly enlarges the item on hover */
+    background-color: #575757; /* Light gray background when hovering */
+    transform: scale(1.1); /* Slightly enlarge on hover for effect */
 }
 
-/* Styling for mobile responsiveness */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     .navbar ul {
-        flex-direction: column; /* Stack the items vertically on small screens */
-    }
-
-    .navbar li {
-        margin: 10px 0; /* Adds space between items when stacked */
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center them when stacked */
+        gap: 10px; /* Space between items */
     }
 
     .navbar a {
-        padding: 8px 15px; /* Reduces padding on mobile */
-        font-size: 1rem; /* Slightly smaller text on mobile */
+        padding: 8px 15px; /* Adjust padding on small screens */
+        font-size: 1rem; /* Smaller text on mobile */
     }
 }
 
