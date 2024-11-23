@@ -86,7 +86,7 @@ input[type="submit"]:hover {
     background-color: #f0f0f0;
     padding: 20px 0;
     margin-top: 10px; /* Adds space between content and the banner */
-    overflow: hidden; /* Hides the part of the images that go beyond the container */
+     /* Hides the part of the images that go beyond the container */
 }
 
 .image-container {
