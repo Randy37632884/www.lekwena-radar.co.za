@@ -2,12 +2,12 @@ html {
     background-color: white;
     color: black;
     font-family: Arial, sans-serif;
-    margin: 0; /* Fixed margin value */
-    padding: 0; /* Fixed padding value */
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0; /* Ensures no extra space around the body */
+    margin: 0;
     padding: 0;
 }
 
@@ -19,11 +19,11 @@ header {
 }
 
 .navbar ul {
-    list-style: none; /* No bullets for navbar */
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center-align navbar items */
+    justify-content: center;
 }
 
 .navbar li {
@@ -43,7 +43,7 @@ header {
 
 #hero {
     text-align: center;
-    color:black;
+    color: white;
     background: grey;
     padding: 4rem 1rem;
 }
@@ -56,7 +56,7 @@ footer {
 }
 
 form {
-    background-color: white;
+    background-color: red;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -73,7 +73,7 @@ input[type="text"], input[type="email"], textarea {
 }
 
 input[type="submit"] {
-    background-color: grey;
+    background-color: green;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -88,22 +88,23 @@ input[type="submit"]:hover {
 /* Styling for the scrolling image banner */
 .scrolling-banner {
     width: 100%;
-    overflow: hidden; /* Hides overflowing content */
-    background-color: white;
+    overflow: hidden; /* Ensure no overflowing content */
+    background-color: pink;
     padding: 10px 0;
-    position: relative; /* Allows precise positioning */
+    position: relative;
 }
 
 .image-container {
     display: flex;
-    animation: scroll-images 14s linear infinite; /* Smooth scrolling animation */
+    width: max-content; /* Ensure the width is enough to fit all images */
+    animation: scroll-images 14s linear infinite;
 }
 
 .image-container img {
-    margin-right: 5px; /* Space between images */
-    width: 300px; /* Adjust image width */
+    margin-right: 5px;
+    width: 300px;
     height: 150px;
-    object-fit: cover; /* Ensures images fit nicely in the container */
+    object-fit: cover;
 }
 
 /* Keyframes for scrolling images */
