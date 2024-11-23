@@ -1,23 +1,29 @@
-body, html {
-    background-color:white;
+html {
+    background-color: white;
     color: black;
     font-family: Arial, sans-serif;
-    margin: 60;
-    padding: 30
-;
+    margin: 0; /* Fixed margin value */
+    padding: 0; /* Fixed padding value */
+}
+
+body {
+    margin: 0; /* Ensures no extra space around the body */
+    padding: 0;
 }
 
 header {
-    background-color: grey
+    background-color: grey;
     color: white;
     padding: 10px 0;
+    text-align: center;
 }
 
 .navbar ul {
-    list-style: none; /* Fixed the misplaced rule */
+    list-style: none; /* No bullets for navbar */
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center; /* Center-align navbar items */
 }
 
 .navbar li {
@@ -32,7 +38,7 @@ header {
 }
 
 .navbar a:hover {
-    background-color: grey;
+    background-color: darkgrey;
 }
 
 #hero {
@@ -46,6 +52,7 @@ footer {
     padding: 10px 0;
     background: grey;
     color: white;
+    text-align: center;
 }
 
 form {
@@ -81,22 +88,22 @@ input[type="submit"]:hover {
 /* Styling for the scrolling image banner */
 .scrolling-banner {
     width: 100%;
+    overflow: hidden; /* Hides overflowing content */
     background-color: pink;
-    padding: 20px 0;
-    margin-top: 10px; /* Adds space between content and the banner */
-     /* Hides the part of the images that go beyond the container */
+    padding: 10px 0;
+    position: relative; /* Allows precise positioning */
 }
 
 .image-container {
     display: flex;
-    animation: scroll-images 14s linear infinite; /* Scrolls images infinitely */
+    animation: scroll-images 14s linear infinite; /* Smooth scrolling animation */
 }
 
 .image-container img {
-    margin-right: 05px; /* Space between images */
-    width: 300px; /* You can adjust the size of the images */
+    margin-right: 5px; /* Space between images */
+    width: 300px; /* Adjust image width */
     height: 150px;
-    object-fit: cover; /* Ensures images are resized to fit the container */
+    object-fit: cover; /* Ensures images fit nicely in the container */
 }
 
 /* Keyframes for scrolling images */
@@ -108,4 +115,3 @@ input[type="submit"]:hover {
         transform: translateX(-100%); /* Move to the left */
     }
 }
-
