@@ -9,6 +9,7 @@ html {
 /* Basic layout for the entire page */
 /* Styling for the body to remove any default margin and padding */
 /* Reset margin and padding for body */
+/* Reset margin and padding for body */
 body {
     margin: 0;
     padding: 0;
@@ -38,19 +39,19 @@ header {
     margin: 0;
     padding: 0;
     display: flex; /* Makes the list items appear in a row */
-    justify-content: space-between; /* Evenly spaces items horizontally */
-    gap: 20px; /* Adds consistent space between the items */
+    justify-content: center; /* Centers navbar items */
+    gap: 20px; /* Adds space between navbar items */
 }
 
 .navbar li {
-    display: inline-block; /* Makes sure the items are inline */
+    position: relative; /* This allows us to position the dropdown menu inside the list item */
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem; /* Font size for subheadings */
-    padding: 10px 20px; /* Padding around the text */
+    font-size: 1.2rem;
+    padding: 10px 20px;
     display: block;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -58,40 +59,59 @@ header {
 
 /* Hover effect for links */
 .navbar a:hover {
-    background-color: #575757; /* Darker background when hovered */
-    transform: scale(1.1); /* Slightly enlarges the item on hover */
+    background-color: #575757;
+    transform: scale(1.1);
 }
 
-/* Responsive design for smaller screens */
+/* Styling for the dropdown menu (hidden by default) */
+.navbar li:hover .dropdown-menu {
+    display: block; /* Shows the dropdown menu on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none; /* Hides the dropdown menu by default */
+    position: absolute; /* Positions the dropdown below the parent item */
+    top: 100%; /* Positions it just below the navbar item */
+    left: 0;
+    background-color: #444; /* Dark background for dropdown */
+    width: 200px; /* Dropdown width */
+    padding: 10px 0; /* Padding around the links */
+    border-radius: 5px;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px; /* Padding inside dropdown items */
+    font-size: 1rem;
+    text-align: left; /* Aligns the text to the left inside the dropdown */
+    color: white;
+    display: block;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu a:hover {
+    background-color: #575757;
+}
+
+/* Mobile-friendly layout */
 @media (max-width: 768px) {
     .navbar ul {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Centers the items when stacked */
-        gap: 10px; /* Smaller gap for stacked items */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .navbar a {
-        font-size: 1rem; /* Slightly smaller text on mobile */
-        padding: 8px 15px; /* Reduced padding on mobile */
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    /* Dropdown for small screens */
+    .navbar li:hover .dropdown-menu {
+        display: block;
     }
 }
 
-
-.navbar a:hover {
-    background-color: darkgrey;
-}
-
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column; /* Stacks the navigation items vertically */
-        align-items: center; //* Reduced padding for better space utilization */
-     }
-
-    .navbar a {
-        font-size: 1rem; /* Slightly smaller font size */
-        padding: 8px 16px; /* Reduced padding for smaller screens */
-    }
-}
 #hero {
     text-align: center;
     color: white;
