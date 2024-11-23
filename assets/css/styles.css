@@ -87,7 +87,7 @@ input[type="submit"]:hover {
 
 /* Styling for the scrolling image banner */
 .scrolling-banner {
-    width: 50%;
+    width: 100%;
     overflow: hidden; /* Hides overflowing content */
     background-color: white;
     padding: 0px 0;
