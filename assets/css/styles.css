@@ -24,10 +24,11 @@ header {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navbar li {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .navbar a {
@@ -35,10 +36,18 @@ header {
     text-decoration: none;
     padding: 10px;
     transition: background-color 0.3s ease;
+    font-size: 1.2rem;
 }
 
 .navbar a:hover {
     background-color: darkgrey;
+}
+
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 1rem; /* Slightly smaller font size on smaller screens */
+        padding: 8px; /* Reduced padding for better space utilization */
+    }
 }
 
 #hero {
