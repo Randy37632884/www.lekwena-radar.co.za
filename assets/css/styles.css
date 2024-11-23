@@ -13,23 +13,29 @@ header {
     padding: 1rem;
 }
 
+list-style: none; margin: 0; padding: 0; display: flex; justify-content: center;
+
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 .navbar li {
-    margin-left: 1rem;
+    margin: 0 20px;
 }
 
 .navbar a {
     color: #fff;
     text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
 }
-
-#hero {
+.navbar a:hover { background-color: #555; }
+#hero
+{
     text-align: center;
     color: #fff;
     background: #007BFF;
@@ -41,4 +47,33 @@ footer {
     padding: 1rem;
     background: #333;
     color: #fff;
+}
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }
