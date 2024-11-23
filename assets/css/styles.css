@@ -90,7 +90,7 @@ input[type="submit"]:hover {
     width: 100%;
     overflow: hidden; /* Hides overflowing content */
     background-color: white;
-    padding: 0px 0;
+    padding: 40px 0;
     position: relative; /* Allows precise positioning */
 }
 
