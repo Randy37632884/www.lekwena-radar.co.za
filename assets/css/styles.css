@@ -1,4 +1,3 @@
-/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
@@ -13,10 +12,8 @@ header {
     padding: 1rem;
 }
 
-list-style: none; margin: 0; padding: 0; display: flex; justify-content: center;
-
 .navbar ul {
-    list-style: none;
+    list-style: none; /* Fixed the misplaced rule */
     margin: 0;
     padding: 0;
     display: flex;
@@ -33,9 +30,12 @@ list-style: none; margin: 0; padding: 0; display: flex; justify-content: center;
     padding: 10px;
     transition: background-color 0.3s ease;
 }
-.navbar a:hover { background-color: #555; }
-#hero
-{
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+#hero {
     text-align: center;
     color: #fff;
     background: #007BFF;
@@ -48,6 +48,7 @@ footer {
     background: #333;
     color: #fff;
 }
+
 form {
     background-color: #fff;
     padding: 20px;
@@ -77,6 +78,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+
 /* Styling for the scrolling image banner */
 .scrolling-banner {
     width: 100%;
@@ -107,3 +109,4 @@ input[type="submit"]:hover {
         transform: translateX(-100%); /* Move to the left */
     }
 }
+
