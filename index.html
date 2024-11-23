@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekwena Radar - Modernized</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         /* Basic Reset */
         body {
@@ -17,32 +16,16 @@
             background-color: grey;
             color: white;
             padding: 20px;
-            text-align: center;
-            position: relative; /* To position the hamburger correctly */
+            position: relative;
         }
 
-        /* Hide the checkbox input */
-        .menu-toggle {
-            display: none;
-        }
-
-        /* Styling for the Hamburger Icon (Label) */
-        .hamburger {
-            font-size: 30px; /* Size of the hamburger icon */
-            cursor: pointer; /* Changes the mouse pointer when hovering */
-            display: none; /* Hidden by default */
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        /* Navigation Menu Styling */
+        /* Navigation Menu - Default Horizontal */
         .nav-links {
             list-style: none;
+            display: flex;
+            justify-content: center;
             margin: 0;
             padding: 0;
-            display: flex; /* Default layout is horizontal */
-            justify-content: center; /* Centers the items */
         }
 
         .nav-links li {
@@ -53,70 +36,74 @@
             color: white;
             text-decoration: none;
             font-size: 1.2rem;
-            padding: 10px 20px;
+            padding: 10px;
         }
 
-        /* Mobile-Friendly Styles */
-        @media (max-width: 768px) {
-            /* Show hamburger icon on smaller screens */
-            .hamburger {
-                display: block; /* Shows the hamburger icon */
-            }
+        /* Hidden checkbox for hamburger */
+        .menu-toggle {
+            display: none;
+        }
 
-            /* Initially hide the nav links */
+        /* Hamburger icon styling */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Hide the menu by default */
-                flex-direction: column; /* Stack the items vertically */
+                display: none; /* Hide menu by default */
+                flex-direction: column;
+                background-color: grey;
+                position: absolute;
+                top: 60px;
+                left: 0;
                 width: 100%;
                 text-align: center;
-                background-color: grey; /* Dark background for the dropdown */
-                position: absolute;
-                top: 60px; /* Adjust based on your header height */
-                left: 0;
-                padding: 10px 0;
+                padding: 0;
             }
 
             .nav-links li {
                 margin: 10px 0;
             }
 
-            /* When the checkbox is checked, display the menu */
-            .menu-toggle:checked + .hamburger + .nav-links {
-                display: flex;
+            .hamburger {
+                display: block; /* Show hamburger */
             }
 
-            /* Optional: add a transition to smooth the menu appearance */
-            .nav-links {
-                transition: all 0.3s ease-in-out;
+            /* Show menu when checkbox is checked */
+            .menu-toggle:checked ~ .nav-links {
+                display: flex;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <h1>Lekwena Radar</h1>
-            <!-- Hidden Checkbox -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-            
-            <!-- Label for the Hamburger Icon -->
-            <label for="menu-toggle" class="hamburger">&#9776;</label>
-
-            <!-- Navigation Menu -->
+        <h1>Lekwena Radar</h1>
+        <!-- Hamburger Menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Hourly Observations</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
-    </header> 
+        </nav>
+    </header>
 
     <section id="hero">
         <h1>Welcome to Lekwena Radar</h1>
         <p>A living Weather Laboratory.</p>
         <a href="services.html" class="btn">Explore hourly Observations</a>
-    </section> 
+    </section>
 
     <section id="imageBanner" class="scrolling-banner">
         <div class="image-container">
@@ -124,10 +111,11 @@
             <img src="https://i.postimg.cc/1zkY67bQ/wrc-logo-small.png" alt="Image 2">
             <img src="https://i.postimg.cc/0QCxtgHK/lekwena-logo.png" alt="Image 3">
         </div>
-    </section> 
+    </section>
 
     <footer>
         <p>&copy; 2024 Lekwena Radar. All rights reserved.</p>
-    </footer> 
+    </footer>
 </body>
 </html>
+
