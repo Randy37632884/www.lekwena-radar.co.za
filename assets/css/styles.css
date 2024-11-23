@@ -24,7 +24,7 @@ header {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .navbar li {
@@ -34,9 +34,10 @@ header {
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 20px;
     transition: background-color 0.3s ease;
     font-size: 1.2rem;
+    white-space: nowrap;
 }
 
 .navbar a:hover {
@@ -44,12 +45,16 @@ header {
 }
 
 @media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stacks the navigation items vertically */
+        align-items: center; //* Reduced padding for better space utilization */
+     }
+
     .navbar a {
-        font-size: 1rem; /* Slightly smaller font size on smaller screens */
-        padding: 8px; /* Reduced padding for better space utilization */
+        font-size: 1rem; /* Slightly smaller font size */
+        padding: 8px 16px; /* Reduced padding for smaller screens */
     }
 }
-
 #hero {
     text-align: center;
     color: white;
