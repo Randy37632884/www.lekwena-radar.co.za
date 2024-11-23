@@ -3,7 +3,8 @@ body, html {
     color: white;
     font-family: Arial, sans-serif;
     margin: 60;
-    padding: 0;
+    padding: 30
+;
 }
 
 header {
@@ -48,7 +49,7 @@ footer {
 }
 
 form {
-    background-color: grey;
+    background-color: red;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -65,7 +66,7 @@ input[type="text"], input[type="email"], textarea {
 }
 
 input[type="submit"] {
-    background-color: grey;
+    background-color: green;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -74,13 +75,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: grey;
+    background-color: blue;
 }
 
 /* Styling for the scrolling image banner */
 .scrolling-banner {
     width: 100%;
-    background-color: grey;
+    background-color: pink;
     padding: 20px 0;
     margin-top: 10px; /* Adds space between content and the banner */
      /* Hides the part of the images that go beyond the container */
