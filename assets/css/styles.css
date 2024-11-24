@@ -18,7 +18,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: grey;
+    background-color: green;
     color: white;
     padding: 20px;
     text-align: center;
@@ -91,7 +91,7 @@ header {
 
 /* Hover effect for dropdown links */
 .dropdown-menu a:hover {
-    background-color: #575757;
+    background-color: green;
 }
 
 /* Mobile-friendly layout */
