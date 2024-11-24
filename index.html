@@ -22,6 +22,8 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
+            overflow: hidden;
+            height: 100vh; /* Ensure header covers full viewport height */
         }
 
         /* Video Background for Nav */
@@ -31,8 +33,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            z-index: -1;
+            border: none;
         }
 
         .header-content {
@@ -40,12 +41,12 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            z-index: 1;
+            z-index: 1; /* Ensure content appears above the video */
         }
 
         header h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 2.5rem;
         }
 
         nav ul {
@@ -191,4 +192,3 @@
     </footer>
 </body>
 </html>
-
