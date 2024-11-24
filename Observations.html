@@ -23,13 +23,28 @@
         <h2>Observations</h2>
         <span class="smaller-text">Recommended to view products on Firefox</span>
         <ul>
-            <h2>Real-time Weather Radar</h2>
-            <span class="smaller-text">Radar Status: Online, Static image available</span>
-         <div class="image-container">
-            <img src="https://i.postimg.cc/wT0pYHRb/nwu-logo-small.png" alt="Image 1">
-        </div>
+<section id="radar">
+    <h2>Real-Time Radar Image</h2>
+    <img id="radarImage" src="https://your-radar-image-url.com/radar.png" alt="School Radar Image" style="width:100%; max-width:600px; border:2px solid #ccc; border-radius:8px;">
             Static Image Of Radar readings, auto-updates every 5 minutes
-            
+    #radar {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#radar img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+}
+
+</section>
+    
             <h2>Detailed Storm Characteristics</h2>
               <span class="smaller-text">Detailed storm characteristics is availible by clicking on the red polygon, or the black storm track. It is usefull to examine the static image below to see where interference is wrongly identified, and tracked, as a storm by the algorithm. Refresh your browser if the map box is missing.</span>
          <div class="image-container">
@@ -49,3 +64,15 @@
     </footer>
 </body>
 </html>
+<script>
+    // Function to refresh the radar image every 5 minutes
+    function refreshRadarImage() {
+        const radarImage = document.getElementById('radarImage');
+        const timestamp = new Date().getTime(); // Get current time
+        radarImage.src = `https://your-radar-image-url.com/radar.png?t=${timestamp}`; // Add timestamp to URL
+    }
+
+    // Refresh the radar image immediately and every 5 minutes (300,000ms)
+    refreshRadarImage();
+    setInterval(refreshRadarImage, 300000);
+</script>
