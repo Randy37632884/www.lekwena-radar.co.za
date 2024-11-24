@@ -10,24 +10,17 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: green;
-            color: #333;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            height: 100%;
         }
 
+        /* Header with full height */
         header {
-            background-color: #333;
-            color: white;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
-            overflow: hidden; /* Ensure the content doesn't spill over */
-            height: 100vh; /* Full height of the viewport */
+            height: 100vh;
+            overflow: hidden;
         }
 
-        /* Video Background for Nav */
+        /* Video */
         .background-video {
             position: absolute;
             top: 0;
@@ -35,121 +28,22 @@
             width: 100%;
             height: 100%;
             border: none;
-            object-fit: cover; /* Ensure video fills the container */
-            z-index: -1; /* Ensure video stays behind content */
+            object-fit: cover;
+            z-index: -1;
         }
 
+        /* Content over video */
         .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: relative;
+            z-index: 1;
             text-align: center;
-            z-index: 1; /* Ensure content appears above the video */
+            color: white;
+            padding: 20px;
         }
 
         header h1 {
-            margin: 0;
             font-size: 3rem;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 10px;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        /* Hero Section */
-        #hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #555;
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero-content h1 {
-            font-size: 2.5rem;
-            margin: 0 0 10px;
-            line-height: 1.4;
-        }
-
-        .hero-content p {
-            font-size: 1rem;
             margin: 0;
-            line-height: 1.5;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #ffcc00;
-            color: black;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #ffaa00;
-        }
-
-        /* Scrolling Banner */
-        .scrolling-banner {
-            width: 100%;
-            overflow: hidden;
-            background-color: #ddd;
-            padding: 10px 0;
-        }
-
-        .image-container {
-            display: flex;
-            animation: scroll-images 20s linear infinite;
-            gap: 10px;
-        }
-
-        .image-container img {
-            height: 120px;
-            object-fit: contain;
-        }
-
-        @keyframes scroll-images {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-            margin-top: 20px;
         }
     </style>
 </head>
@@ -159,9 +53,11 @@
     <iframe 
         class="background-video" 
         src="https://player.vimeo.com/video/1032796316?autoplay=1&muted=1&loop=1&controls=0&title=0&byline=0&portrait=0" 
-        width="100%" height="100%" 
+        width="100%" 
+        height="100%" 
         frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture" 
+        allowfullscreen 
         title="The NWU Lekwena Radar">
     </iframe>
 
@@ -196,12 +92,6 @@
         <img src="https://i.postimg.cc/0QCxtgHK/lekwena-logo.png" alt="Image 3">
     </div>
 </section>
-
-<footer>
-    <p>&copy; 2024 NWU Lekwena Radar. All rights reserved. This page was generated via <a href="https://github.com/CRGGithub/crggithub.github.io">GitHub</a> and is maintained by the <a href="http://natural-sciences.nwu.ac.za/unit-environmental-sciences-and-management/climate-change-air-quality-and-impacts">NWU Environmental Sciences Students.</a></p>
-</footer>
-</body>
-</html>
 
 <footer>
     <p>&copy; 2024 NWU Lekwena Radar. All rights reserved. This page was generated via <a href="https://github.com/CRGGithub/crggithub.github.io">GitHub</a> and is maintained by the <a href="http://natural-sciences.nwu.ac.za/unit-environmental-sciences-and-management/climate-change-air-quality-and-impacts">NWU Environmental Sciences Students.</a></p>
