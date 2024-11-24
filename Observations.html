@@ -5,6 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Lekwena Radar</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Inline styles to change colors on this page */
+        body {
+            background-color: #f4f4f4; /* Light grey background for the body */
+            color: #333; /* Dark text color */
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2c3e50; /* Dark blue-grey for header */
+            color: white; /* White text in header */
+            padding: 20px;
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white; /* White links */
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00; /* Change link color to yellow on hover */
+        }
+
+        section#Observations {
+            padding: 40px;
+            background-color: #ffffff; /* White background for the section */
+            color: #555; /* Dark grey text for readability */
+        }
+
+        footer.site-footer {
+            background-color: #333; /* Dark footer */
+            color: white; /* White text in footer */
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        footer.site-footer a {
+            color: #ffcc00; /* Yellow links in footer */
+        }
+
+        footer.site-footer a:hover {
+            color: #ffaa00; /* Lighter yellow on hover */
+        }
+
+        footer.site-footer img {
+            max-width: 150px; /* Limiting the size of the logos */
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,139 +83,59 @@
             </nav>
         </div>
     </header>
+
     <section id="Observations">
         <h2>Observations</h2>
         <span class="smaller-text">Recommended to view products on Firefox</span>
-        <ul>
 
-    <h2>Real-Time Radar Image</h2>
+        <h2>Real-Time Radar Image</h2>
+        <h3 id="time">Time</h3>
+        <p>The radar is set to Coordinated Universal Time (UTC) and not South African Standard Time (SAST). To correct for this you need to add two hours to the time as indicated below, for example 12:04 UTC + 2 Hours = 14:04 SAST. To check if the radar is currently running the time should match within +-10 minutes of the actual time, if it doesn’t it’s safe to assume the radar or webserver is down.</p>
 
+        <p><img src="/assets/images/radar/RadarTime.png" alt="radar_time" /></p>
 
-    
-<!DOCTYPE html>
-<html lang="en">
+        <h3 id="reflectivity-dbz">Reflectivity (dBZ)</h3>
+        <p>In the most basic terms, a radar’s operation consists of a high-frequency signal pulse that’s generated from the site. This signal echoes when it interacts with large particles such as hail or raindrops, and a receiver converts the echo into something human interpretable. This echo is represented as <em>decibel relative to Z</em> or dBZ. Strong dBZ means there are large particles producing a strong echo, such as large rain, hail, or ice particles in clouds.</p>
 
-  <head>
+        <p><img src="/assets/images/radar/RadarDBZ.png" alt="radar_bdz" /></p>
 
-    <!-- Non social metatags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
+        <h3 id="interference">Interference</h3>
+        <p>The NWU Lekwena Radar has a license to operate on the 5.62 GHz bandwidth, and any WiFi or communication network between 5.55 to 5.67 GHz causes problems and hampers data quality. The public is encouraged not to use these bandwidths in the Potchefstroom area, and the NWU-CRG is willing to help users mitigate interference by advising on the installation of Dynamic Frequency Selection (DFS) devices.</p>
 
-    
+        <p><img src="/assets/images/radar/RadarInterf.png" alt="radar_interference" /></p>
 
-    <title>Radar</title>
+        <h3 id="places-indicators">Places Indicators</h3>
+        <p>The radar indicates towns with abbreviations and also some regional airports in the Gauteng Area with the Airplane sign. The little cloud sign indicates the location of the SAWS Irene Weather station. The circular lines indicate the distance from the radar site, which is a maximum of 200km due to various factors such as the curvature of the earth.</p>
 
-    
+        <p><img src="/assets/images/radar/RadarAirports.png" alt="radar_interference" /></p>
 
-    <link rel="canonical" href="http://localhost:4000/radar.html">
+        <h1 id="real-time-nwu-lekwena-radar">Real-Time NWU-Lekwena Radar</h1>
+        <center>
+            <td align="center" valign="center">
+                <img src="http://143.160.8.22/cappi.gif" alt="description here" /><br /> NWU/Lekwena C-Band Radar.
+            </td>
+        </center>
 
-    
+        <h3 id="further-reading">Further Reading</h3>
+        <p><a href="https://www.weather.gov/jetstream/refl">Radar Images: Reflectivity</a></p>
 
-    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
-    <meta name="robots" content="noarchive">
+        <p><a href="https://www.wunderground.com/prepare/understanding-radar">Understanding Weather Radar</a></p>
 
-    <!-- <link rel="alternate" media="only screen and (max-width: 640px)" href="">
-    <link rel="alternate" media="handheld" href=""> -->
+        <p><a href="https://www.weather.gov/iwx/wsr_88d">Everything You Ever Wanted to Know about the NWS WSR-88D</a></p>
 
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=">
-  </head>
-  <body>
-
-    <header class="site-header" role="banner">
-
-  <div class="wrapper">
-    
-    
-
-    <section class="page-header">
-      <h1 class="project-name">Radar</h1>
-      <h2 class="project-tagline">Learn more about the NWU Lekwena Radar</h2>
-      
-      <!-- Post tagline -->
-      
-      <!-- End: Post tagline -->
+        <p><a href="http://www.wxonline.info/topics/radar_nonmet.html">Radar Basics for the Non-Meteorologist</a></p>
     </section>
 
-    <section class="main-content">
-
-      <article>
-
-  <div>
-<h3 id="time">Time</h3>
-<p>The radar is set to Coordinated Universal Time (UTC) and not South African
-Standard Time (SAST). To correct for this you need to add two hours to the time
-as indicated below, for example 12:04 UTC + 2 Hours = 14:04 SAST. To check if
-the radar is currently running the time should match within +-10 minutes of the actual time,
-if it doesn’t it’s safe to assume the radar or webserver is down.</p>
-
-<p><img src="/assets/images/radar/RadarTime.png" alt="radar_time" /></p>
-
-<h3 id="reflectivity-dbz">Reflectivity (dBZ)</h3>
-<p>In the most basic terms a radar’s operation consists of a high frequency signal
-pulse that’s generated from the site, this signal echo’s when it interacts with
-large particles such as hail or raindrops and a receiver converts
-the echo into something human interpretable. This echo is represented as
-<em>decibel relative to Z</em> or dBZ. Strong dBZ means there are large particles producing
-a strong echo, this would be large rain, hail or ice particles in clouds.</p>
-
-<p><img src="/assets/images/radar/RadarDBZ.png" alt="radar_bdz" /></p>
-
-<h3 id="interference">Interference</h3>
-<p>The NWU Lekwena Radar has an license to operate on the 5.62 gHz bandwidth and
-any WiFi or communication network between 5.55 to 5.67 gHz causes problems and
-hampers data quality. The public is encouraged not to use these bandwidths in
-the Potchefstroom area and the NWU-CRG is willing to help users mitigate
-interference by advising on the installation of Dynamic Frequency Selection
-(DFS) devices. Users can also contact their service providers to learn more
-about the frequency of their devices and how to avoid interference with the
-Radar.</p>
-
-<p><img src="/assets/images/radar/RadarInterf.png" alt="radar_interference" /></p>
-
-<h3 id="places-indicators">Places Indicators</h3>
-<p>The radar indicates towns with abbreviations and also some regional airports in
-the Gauteng Area with the Airplane sign. The little cloud sign indicates
-the location of the SAWS Irene Weather station. The circular lines indicate the distance
-of from the radar site, which is a maximum of 200km due to various factors such as the
-curvature of the earth</p>
-
-<p><img src="/assets/images/radar/RadarAirports.png" alt="radar_interference" /></p>
-
-<h1 id="real-time-nwu-lekwena-radar">Real-Time NWU-Lekwena Radar</h1>
-<center> 
-<td align="center" valign="center"> 
-<img src="http://143.160.8.22/cappi.gif" alt="description here" /><br /> NWU/Lekwena C-Band Radar.</td> 
-</center>
-
-<h3 id="further-reading">Further Reading</h3>
-<p><a href="https://www.weather.gov/jetstream/refl">Radar Images: Reflectivity</a></p>
-
-<p><a href="https://www.wunderground.com/prepare/understanding-radar">Understanding Weather Radar</a></p>
-
-<p><a href="https://www.weather.gov/iwx/wsr_88d">Everything You Ever Wanted to Know about the NWS WSR-88D</a></p>
-
-<p><a href="http://www.wxonline.info/topics/radar_nonmet.html">Radar Basics for the Non-Meteorologist</a></p>
-
-  </div>
-
-</article>
-
-
-      <footer class="site-footer">
-      <center>
-      <img src="/assets/images/logo/lekwena_logo.png"></a>
-      <img src="/assets/images/logo/nwu_logo_small.png"></a>
-      <img src="/assets/images/logo/wrc_logo_small.png"></a>
-      <br/>
-      <br/>
-      <span class="site-footer-credits">This page was generated via <a href="https://github.com/CRGGithub/crggithub.github.io">GitHub</a> and is
-       maintained by the <a href="http://natural-sciences.nwu.ac.za/unit-environmental-sciences-and-management/climate-change-air-quality-and-impacts">NWU Environmental Sciences Students.</a></span>
-      </center>
-      </footer>
-    </section>
-  </body>
-</html>          
+    <footer class="site-footer">
+        <center>
+            <img src="/assets/images/logo/lekwena_logo.png" alt="Lekwena Logo">
+            <img src="/assets/images/logo/nwu_logo_small.png" alt="NWU Logo">
+            <img src="/assets/images/logo/wrc_logo_small.png" alt="WRC Logo">
+            <br />
+            <br />
+            <span class="site-footer-credits">This page was generated via <a href="https://github.com/CRGGithub/crggithub.github.io">GitHub</a> and is
+                maintained by the <a href="http://natural-sciences.nwu.ac.za/unit-environmental-sciences-and-management/climate-change-air-quality-and-impacts">NWU Environmental Sciences Students.</a></span>
+        </center>
+    </footer>
+</body>
+</html>
