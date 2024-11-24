@@ -1,114 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
-    <!-- Non social metatags -->
+<head>
+    <!-- Non-social metatags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
 
-    
-
-    <title>Satellite</title>
-
-    
+    <title>Satellite - Lekwena Radar</title>
 
     <link rel="canonical" href="http://localhost:4000/satellite.html">
-
-    
-
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     <meta name="robots" content="noarchive">
 
-    <!-- <link rel="alternate" media="only screen and (max-width: 640px)" href="">
-    <link rel="alternate" media="handheld" href=""> -->
-
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/assets/css/style.css?v=">
-  </head>
-  <body>
 
-       <header>
-      <div class="header-content">
-        <h1>Lekwena Radar</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Observations.html">Observations</a></li>
-                <li><a href="NWU-WRF.html">NWU-WRF</a></li>
-                <li><a href="Satellite.html">Satellite</a></li>
-            </ul>
-        </nav>
-      </div>
-    </header>
+    <style>
+        /* Inline styles for consistent color scheme and responsiveness */
 
+        body {
+            background-color: #f4f4f4; /* Light grey background for the body */
+            color: #333; /* Dark text color */
+            font-family: Arial, sans-serif;
+        }
 
-    
-    
-    
+        header {
+            background-color: #2c3e50; /* Dark blue-grey for header */
+            color: white; /* White text in header */
+            padding: 20px;
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white; /* White links */
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00; /* Change link color to yellow on hover */
+        }
+
+        section.page-header {
+            text-align: center;
+            padding: 40px;
+            background-color: #ffffff; /* White background for the page header */
+            color: #555; /* Dark grey text */
+        }
+
+        .main-content {
+            padding: 40px;
+            background-color: #ffffff;
+            color: #555;
+        }
+
+        .main-content img {
+            width: 100%;
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto;
+            border: 1px solid #ddd; /* Light border around images */
+        }
+
+        footer {
+            background-color: #333; /* Dark footer */
+            color: white; /* White text in footer */
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffcc00; /* Yellow links in footer */
+        }
+
+        footer a:hover {
+            color: #ffaa00; /* Lighter yellow on hover */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+
+            .header-content h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            section.page-header h1 {
+                font-size: 1.5rem;
+            }
+
+            section.page-header h2 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>NWU Lekwena Radar</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Observations.html">Observations</a></li>
+                    <li><a href="NWU-WRF.html">NWU-WRF</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <section class="page-header">
-      <h1 class="project-name">Satellite</h1>
-      <h2 class="project-tagline">See Southern-Africa&#39;s weather from space</h2>
-      
-      <!-- Post tagline -->
-      
-      <!-- End: Post tagline -->
+        <h1 class="project-name">Satellite</h1>
+        <h2 class="project-tagline">See Southern-Africa&#39;s weather from space</h2>
     </section>
 
     <section class="main-content">
+        <article>
+            <div>
+                <meta http-equiv="refresh" content="950" />
 
-      <article>
+                <h1 id="eumetsat-products">EUMETSAT Products</h1>
+                <p>All images are products from the <a href="https://www.eumetsat.int/website/home/index.html">European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)</a></p>
 
-  <div>
-    <meta http-equiv="refresh" content="950" />
+                <center>
+                    <img src="https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_IR108Color_SouthernAfrica.jpg" alt="EUMETSAT RGB" />
+                    <br /> EUMETSAT SEVIRI spectral channel IR 10.8 (copyright 2018 EUMETSAT).
+                </center>
 
-<h1 id="eumetsat-products">EUMETSAT Products</h1>
+                <p><br /></p>
 
-<p>All images are products from the <a href="https://www.eumetsat.int/website/home/index.html">European Organisation for the Exploitation of
-Meteorological Satellites (EUMETSAT)</a></p>
+                <center>
+                    <img src="https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_RGBConvection_SouthernAfrica.jpg" alt="EUMETSAT Convection RGB" />
+                    <br /> EUMETSAT Convection RGB (copyright 2018 EUMETSAT).
+                </center>
 
-<center> 
-<td align="center" valign="center"> <img src="https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_IR108Color_SouthernAfrica.jpg" alt="EUMETSAT RGB" /> <br /> EUMETSAT SEVIRI spectral channel IR 10.8 (copyright 2018 EUMETSAT). </td> 
-</center>
+                <p><br /></p>
 
-<p><br /></p>
+                <center>
+                    <img src="https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_MPE_SouthernAfrica.png" alt="EUMETSAT Multi-Sensor Precipitation Estimate" />
+                    <br /> EUMETSAT Multi-Sensor Precipitation Estimate (copyright 2018 EUMETSAT).
+                </center>
 
-<center> 
-<td align="center" valign="center"> <img src="https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_RGBConvection_SouthernAfrica.jpg" alt="EUMETSAT Convection RGB" /> <br /> EUMETSAT Convection RGB (copyright 2018 EUMETSAT). </td> 
-</center>
+                <p><br /></p>
 
-<p><br /></p>
+                <center>
+                    <img src="https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_AMV_SouthernAfrica.png" alt="EUMETSAT Atmospheric Vectors" />
+                    <br /> EUMETSAT Multi-Sensor Atmospheric Vectors Estimate (copyright 2018 EUMETSAT).
+                </center>
 
-<center> 
-<td align="center" valign="center"> <img src="https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_MPE_SouthernAfrica.png" alt="EUMETSAT Convection RGB" /> <br /> EUMETSAT Multi-Sensor Precipitation Estimate (copyright 2018 EUMETSAT). </td> 
-</center>
+            </div>
+        </article>
 
-<p><br /></p>
-
-<center>
-<td align="center" valign="center"> <img src="https://eumetview.eumetsat.int/static-images/latestImages/EUMETSAT_MSG_AMV_SouthernAfrica.png" alt="EUMETSAT Atmospheric Vectors" /> <br /> EUMETSAT Multi-Sensor Atmospheric Vectors Estimate (copyright 2018 EUMETSAT). </td> 
-</center>
-
-  </div>
-
-</article>
-
-
-      <footer class="site-footer">
-      <center>
-      <img src="/assets/images/logo/lekwena_logo.png"></a>
-      <img src="/assets/images/logo/nwu_logo_small.png"></a>
-      <img src="/assets/images/logo/wrc_logo_small.png"></a>
-      <br/>
-      <br/>
-      <span class="site-footer-credits">This page was generated via <a href="https://github.com/CRGGithub/crggithub.github.io">GitHub</a> and is
-       maintained by the <a href="http://natural-sciences.nwu.ac.za/unit-environmental-sciences-and-management/climate-change-air-quality-and-impacts">NWU Environmental Sciences Students.</a></span>
-      </center>
-      </footer>
+        <footer class="site-footer">
+            <center>
+                <img src="/assets/images/logo/lekwena_logo.png" />
+                <img src="/assets/images/logo/nwu_logo_small.png" />
+                <img src="/assets/images/logo/wrc_logo_small.png" />
+                <br />
+                <br />
+                <span class="site-footer-credits">This page was generated via <a href="https://github.com/CRGGithub/crggithub.github.io">GitHub</a> and is maintained by the <a href="http://natural-sciences.nwu.ac.za/unit-environmental-sciences-and-management/climate-change-air-quality-and-impacts">NWU Environmental Sciences Students.</a></span>
+            </center>
+        </footer>
     </section>
-  </body>
+</body>
+
 </html>
